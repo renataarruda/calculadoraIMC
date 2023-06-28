@@ -27,8 +27,6 @@ function calculaIMC() {
 
     adicionarCalculoIMC(altura.valueAsNumber, peso.valueAsNumber, calculoIMC);
     exibirUltimosCalculos();
-
-
 }
 
 
@@ -56,7 +54,6 @@ function adicionarCalculoIMC(altura, peso, imc) {
     localStorage.setItem('ultimosCalculos', JSON.stringify(calculos));
     var div = document.getElementById('listaResultados');
     div.textContent = `Altura: ${altura}, Peso: ${peso}, IMC ${imc}`;
-
 }
 
 function exibirUltimosCalculos() {
