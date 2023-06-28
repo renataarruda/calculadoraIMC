@@ -25,7 +25,10 @@ function calculaIMC() {
         resultado.textContent = 'Número inválido';
     }
 
-    salvar();
+    adicionarCalculoIMC(altura.valueAsNumber, peso.valueAsNumber, calculoIMC);
+    exibirUltimosCalculos();
+
+
 }
 
 
@@ -36,30 +39,36 @@ function limpar() {
 
 }
 
-function salvar() {
+function getUltimosCalculos() {
+    var calculos = localStorage.getItem('ultimosCalculos');
+    return calculos ? JSON.parse(calculos) : [];
+}
 
-    var obj;
+function adicionarCalculoIMC(altura, peso, imc) {
+    var calculos = getUltimosCalculos();
 
-    let altura = document.getElementById("altura")
-    let peso = document.getElementById("peso");
-    let resultado = (peso.valueAsNumber / Math.pow(altura.valueAsNumber, 2));
+    calculos.unshift({ altura, peso, imc });
 
+    if (calculos.length > 5) {
+        calculos.pop();
+    }
+
+    localStorage.setItem('ultimosCalculos', JSON.stringify(calculos));
     var div = document.getElementById('listaResultados');
-
-    document.getElementById('btn-calcular').addEventListener('click', function() {
-    
-        obj = {
-          altura: altura.value,
-          peso: peso.value,
-          imc: resultado
-        };
-
-        localStorage.setItem('dadosIMC', JSON.stringify(obj));
-
-        div.textContent = `Altura: ${obj.altura}, Peso: ${obj.peso}, IMC ${obj.imc}`;
-       
-        var verDados = localStorage.getItem('dadosIMC');
-    });
+    div.textContent = `Altura: ${altura}, Peso: ${peso}, IMC ${imc}`;
 
 }
 
+function exibirUltimosCalculos() {
+    var calculos = getUltimosCalculos();
+
+    var listaCalculos = document.getElementById('listaCalculos');
+    listaCalculos.innerHTML = '';
+
+    for (var i = 0; i < calculos.length; i++) {
+        var calculo = calculos[i];
+        var resultado = document.createElement('li');
+        resultado.textContent = `Altura: ${calculo.altura}, Peso: ${calculo.peso}, IMC: ${calculo}`;
+    }
+
+}
