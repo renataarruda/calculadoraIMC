@@ -16,6 +16,7 @@ fieldset {
   flex-flow: column wrap;
   border: none;
   align-content: center;
+  margin-top: 40px;
 }
 
 label {
