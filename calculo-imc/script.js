@@ -22,7 +22,7 @@ function calculaIMC() {
     } else if (calculoIMC < 40) {
         resultado.textContent = `Seu IMC é de ${calculoIMC.toFixed(2)}. Você está com obesidade grave.`;
     } else {
-        resultado.textContent = 'Número inválido';
+        resultado.textContent = 'Por favor, preencha os campos com números válidos.';
     }
 
     adicionarCalculoIMC(altura.valueAsNumber, peso.valueAsNumber, calculoIMC);
