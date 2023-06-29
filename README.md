@@ -3,6 +3,7 @@
 Projeto de calculadora básica de IMC para a realização de trabalho prático da disciplina de Desenvolvimendo Web da Faculdade XP Educação - IGTI.
 
 {Requer melhorias}
+
 ## Projeto
 O desafio consiste em criar uma página web que possua dois inputs, nos quais o usuário possa digitar sua altura e peso, e dois botões, um para limpar todas as informações voltando a página para o status inicial e outro para realizar os cálculos.
 
@@ -13,3 +14,5 @@ Ao clicar no botão de limpar, tanto a seção de resultado quanto os valores di
 A página deve sempre guardar no localStorage do navegador os últimos 5
 cálculos realizados, armazenando altura, peso e valor número do IMC
 encontrado.
+
+## Demonstração
