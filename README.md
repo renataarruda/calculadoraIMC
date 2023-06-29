@@ -16,3 +16,5 @@ cálculos realizados, armazenando altura, peso e valor número do IMC
 encontrado.
 
 ## Demonstração
+
+[screen-capture (2).webm](https://github.com/renataarruda/calculadoraIMC/assets/91355221/4f4a2008-3c09-42c7-9e11-a02fa0104b2f)
