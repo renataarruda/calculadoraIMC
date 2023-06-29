@@ -1,0 +1,61 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: floralwhite;
+  width: 100%;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: crimson;
+  font-weight: 700;
+}
+
+fieldset {
+  display: flex;
+  flex-flow: column wrap;
+  border: none;
+  align-content: center;
+}
+
+label {
+  width: 10%;
+  justify-self: flex-start;
+}
+
+.input__altura {
+    justify-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.input__peso {
+    justify-self: flex-start;
+    margin-bottom: 10px;
+}
+
+#peso {
+    margin-left: 18px;
+}
+
+.botoes {
+  text-align: center;
+  margin: 30px auto;
+}
+
+button {
+  color: #fff;
+  background-color: crimson;
+  width: 10%;
+  padding: 10px;
+  border-radius: 5%;
+}
+
+.texto {
+  text-align: center;
+  margin: 30px auto;
+}
+
+#listaResultados {
+  text-align: center;
+  margin: 30px auto;
+}
