@@ -1,11 +1,10 @@
 
-let altura = document.getElementById("altura")
-let peso = document.getElementById("peso");
-let resultado = document.getElementById("resultado");
-
 function calculaIMC() {
-
+    
+    let altura = document.getElementById("altura")
+    let peso = document.getElementById("peso");
     var calculoIMC = peso.valueAsNumber / Math.pow(altura.valueAsNumber, 2);
+    let resultado = document.getElementById("resultado");
 
     if (calculoIMC < 18.5) {
         resultado.textContent = `Seu IMC é de ${calculoIMC.toFixed(2)}. Você está abaixo do peso.`;
@@ -19,7 +18,7 @@ function calculaIMC() {
     } else if (calculoIMC >= 30 && calculoIMC < 39.9) {
         resultado.textContent = `Seu IMC é de ${calculoIMC.toFixed(2)}. Você está obeso.`;
 
-    } else if (calculoIMC < 40) {
+    } else if (calculoIMC < 40)  {
         resultado.textContent = `Seu IMC é de ${calculoIMC.toFixed(2)}. Você está com obesidade grave.`;
     } else {
         resultado.textContent = 'Por favor, preencha os campos com números válidos.';
@@ -34,7 +33,6 @@ function limpar() {
     document.getElementById('altura').value = '';
     document.getElementById('peso').value = '';
     resultado.textContent = '';
-
 }
 
 function getUltimosCalculos() {
